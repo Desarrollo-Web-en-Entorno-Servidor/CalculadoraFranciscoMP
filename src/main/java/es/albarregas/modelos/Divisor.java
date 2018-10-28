@@ -12,12 +12,12 @@ import es.albarregas.exceptions.ExcepcionDividirPorCero;
  * @author FranciscoAntonio
  */
 public class Divisor{
-	public int cociente (int numerador, int denominador){
+	public int cociente (int numerador, int denominador)throws ExcepcionDividirPorCero {
 		int valor=0;
 		try{
 			valor =numerador/denominador;
 		}
-		catch(ArithmeticException arithmeticException){
+		catch(ExcepcionDividirPorCero  e){
                     System.out.println( "Cero es un denominador inválido" );
 		}
 		return valor; //retorna el valor de la división.
